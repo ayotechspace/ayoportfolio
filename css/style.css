@@ -23,17 +23,18 @@ body {
 
 header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   backdrop-filter: brightness(15%);
-  padding: 1.5rem;
+  padding: 1.8rem;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 9999;
 }
 
-.logo-container {
+.logo-container, .container {
   display: flex;
   align-items: center;
 }
@@ -44,6 +45,15 @@ header {
   background: var(--telegram);
   border-radius: 50%;
   object-fit: cover;
+}
+
+#closeBtn {
+  background: none;
+  border-radius: 0.9rem;
+  border: none;
+  color: var(--telegram);
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 #taskSection {
@@ -166,7 +176,7 @@ input, input::placeholder {
     font-size: 2.5rem;
   }
   
-    #feedBack {
+    #feedBack, #closeBtn {
     font-size: 1.5rem;
   }
   
@@ -215,7 +225,7 @@ input, input::placeholder {
     font-size: 1.5rem;
   }
   
-  #feedBack {
+  #feedBack, #closeBtn {
     font-size: 1rem;
   }
   
