@@ -1,0 +1,238 @@
+:root {
+  --telegram: #229DE9;
+  --dark-blue: #0B1D3A;
+  --black: #000000;
+  --white: #FFFFFF;
+  --green: green;
+  --tomato: tomato;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  filter: contrast(1.0);
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Sans-Serif', Verdana;
+  background: var(--white);
+  min-height: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  backdrop-filter: brightness(15%);
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 90px;
+  height: 90px;
+  background: var(--telegram);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#taskSection {
+  background: transparent;
+  padding: 14px;
+}
+
+.taskInput {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+#inputTask {
+  background: rgba(225, 225, 225, 0.3);
+  backdrop-filter: brightness(20%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2.75rem 2.95rem;
+  width: 100%;
+}
+
+input, input::placeholder {
+  font-size: 2.68rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+#addTask {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 3.8rem;
+  right: 2.2rem;
+  z-index: 10;
+}
+
+#addTask .fa-solid {
+  color: var(--telegram);
+  font-size: 3.10rem;
+  transition: color 0.4s ease
+}
+
+#addTask .fa-solid:hover {
+  color: var(--black);
+}
+
+#feedBack {
+  color: var(--tomato);
+  text-align: center;
+  width: 100%;
+  margin: 0.8rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 12px;
+}
+
+.taskList ul {
+  list-style: none;
+  align-items: center;
+}
+
+.taskList li {
+  background: var(--telegram);
+  border: none;
+  border-radius: 0.8rem;
+  padding: 2.62rem 2.46rem;
+  margin: 1rem 0;
+  transition: all 0.5s ease-in;
+}
+
+.taskList span, .remark, .delete {
+  background: none;
+  border: none;
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin: 0 1.0rem;
+}
+
+.remark {
+  color: var(--green);
+  font-size: 1.85rem;
+}
+
+.delete {
+  color: var(--white);
+  font-size: 2.98rem;
+}
+
+@media(max-width: 768px) {
+  
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  #inputTask {
+    padding: 1.4rem 1.6rem;
+  }
+  
+  input, input::placeholder {
+    font-size: 1.5rem;
+  }
+  
+  #addTask {
+    top: 2rem;
+    right: 1.8rem;
+  }
+  
+  #addTask .fa-solid {
+    font-size: 2.5rem;
+  }
+  
+    #feedBack {
+    font-size: 1.5rem;
+  }
+  
+  .taskList li {
+    padding: 1.4rem 1.6rem;
+  }
+  
+  .taskList span {
+    font-size: 1.29rem;
+    margin: 0 0.8rem;
+  }
+  
+  .remark {
+    font-size: 1.27rem;
+    margin: 0 0.8rem;
+  }
+  
+  .delete {
+    font-size: 1.98rem;
+    margin: 0 0.8rem;
+  }
+  
+}
+
+@media(max-width: 480px) {
+  
+  .logo-container img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #inputTask {
+    padding: 0.7rem 0.9rem;
+  }
+  
+  input, input::placeholder {
+    font-size: 1rem;
+  }
+  
+  #addTask {
+    top: 24px;
+    right: 20px;
+  }
+  
+  #addTask .fa-solid {
+    font-size: 1.5rem;
+  }
+  
+  #feedBack {
+    font-size: 1rem;
+  }
+  
+  .taskList li {
+    padding: 0.8rem 1rem;
+  }
+  
+  .taskList span {
+    font-size: 0.7rem;
+  }
+  
+  .remark {
+    font-size: 0.85rem;
+  }
+  
+  .delete {
+    font-size: 1.2rem;
+  }
+  
+}
