@@ -133,7 +133,7 @@ input, input::placeholder {
   transition: all 0.5s ease-in;
 }
 
-.taskList span, .remark, .delete {
+.taskList span, .mark, .delete {
   background: none;
   border: none;
   font-size: 2.0rem;
@@ -141,7 +141,7 @@ input, input::placeholder {
   margin: 0 1.0rem;
 }
 
-.remark {
+.mark {
   color: var(--green);
   font-size: 1.85rem;
 }
@@ -188,7 +188,7 @@ input, input::placeholder {
     margin: 0 0.8rem;
   }
   
-  .remark {
+  .mark {
     font-size: 1.27rem;
     margin: 0 0.8rem;
   }
@@ -236,7 +236,7 @@ input, input::placeholder {
     font-size: 0.7rem;
   }
   
-  .remark {
+  .mark {
     font-size: 0.85rem;
   }
   
